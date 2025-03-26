@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "https://fedtest.bylith.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }

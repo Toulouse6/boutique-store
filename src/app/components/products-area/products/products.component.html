@@ -1,0 +1,36 @@
+<div>
+    <app-header />
+
+    <div class="titleBox">
+        <h1>Our Products</h1>
+    </div>
+
+    <!-- Catalog -->
+    <div class="catalogWrapper">
+        <div *ngIf="displayedProducts?.length > 0; else noProducts">
+            <app-product-card *ngFor="let p of displayedProducts" [product]="p" />
+        </div>
+        <ng-template #noProducts>
+            <p>No products available.</p>
+        </ng-template>
+        <br>
+
+            <!-- Pagination -->
+        <div class="pagination">
+            <button (click)="goToPreviousPage()" [disabled]="currentPage === 1">
+                &#x2190;
+            </button>
+
+            <div class="pagination-numbers">
+                <span *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i+1)"
+                    [class.active]="currentPage === i+1">
+                    {{ i + 1 }}
+                </span>
+            </div>
+
+            <button (click)="goToNextPage()" [disabled]="currentPage === totalPages">
+                &#x2192;
+            </button>
+        </div>
+    </div>
+</div>
