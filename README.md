@@ -3,6 +3,9 @@
 Boutique Store is an Angular-based web app for buying fashion items.  
 Data is fetched from a remote API and displayed in a responsive layout, where users can view a grid of available products, see detailed product information, and add products to their cart.
 
+Git Page:
+https://toulouse6.github.io/boutique-store/
+
 ## Development Setup
 
 This project uses a temporary CORS proxy to access the API at `https://fedtest.bylith.com`.  
