@@ -2,6 +2,7 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { IMAGE_CONFIG } from '@angular/common';
+import { environment } from '../environments/environment';
 
 export const appConfig = {
     // Injecting object at app level:
@@ -17,6 +18,6 @@ export const appConfig = {
         }
     ],
     // Server urls:
-    productsUrl: "/api/catalog/getAll",
-    productUrl: "/api/catalog/get"
+    productsUrl: `${environment.apiUrl}/products`,
+    productUrl: `${environment.apiUrl}/product`
 };
