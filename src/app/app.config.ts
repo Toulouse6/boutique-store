@@ -18,6 +18,6 @@ export const appConfig = {
         }
     ],
     // Server urls:
-    productsUrl: `${environment.apiUrl}/getAll`,
-    productUrl: `${environment.apiUrl}/get`
+    productsUrl: `${environment.apiUrl}/catalog/getAll`,
+  productUrl: `${environment.apiUrl}/catalog/get`
 };
