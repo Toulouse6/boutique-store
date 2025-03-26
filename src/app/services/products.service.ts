@@ -21,7 +21,8 @@ export class ProductsService {
     // Fetch all products
     public async getAllProducts(): Promise<ProductModel[]> {
         try {
-            const observable = this.http.get<any>(appConfig.productsUrl);
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+            const observable = this.http.get<any>(proxyUrl + appConfig.productsUrl);
             const response = await firstValueFrom(observable);
             return Array.isArray(response?.data) ? response.data : [];
         } catch (error) {
@@ -33,8 +34,9 @@ export class ProductsService {
     // Fetch one product
     public async getOneProduct(id: number): Promise<ProductModel | null> {
         try {
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
             const observable = this.http.get<{ type: number; data: ProductModel }>(
-                `${appConfig.productUrl}?id=${id}`
+                `${proxyUrl}${appConfig.productUrl}?id=${id}`
             );
             const response = await firstValueFrom(observable);
             return response.data ?? null;
@@ -46,8 +48,8 @@ export class ProductsService {
 
     // Get colors
     public getAvailableColors(product: ProductModel) {
-   
-        const colorAttrs = product.attributes?.filter(attr => 
+
+        const colorAttrs = product.attributes?.filter(attr =>
             attr.title?.toLowerCase().includes('color')
         );
         const labels = colorAttrs?.[0]?.labels || [];
@@ -56,8 +58,8 @@ export class ProductsService {
 
     // Get sizes
     getAvailableSizes(product: ProductModel) {
-        const sizeAttrs = product.attributes?.filter(attr => 
-            ['size', 'waist', 'length', 'fit'].some(keyword => 
+        const sizeAttrs = product.attributes?.filter(attr =>
+            ['size', 'waist', 'length', 'fit'].some(keyword =>
                 attr.title?.toLowerCase().includes(keyword)
             )
         );
@@ -68,7 +70,7 @@ export class ProductsService {
     // Get fabrics
     getAvailableFabrics(product: ProductModel) {
 
-        const fabricAttrs = product.attributes?.filter(attr => 
+        const fabricAttrs = product.attributes?.filter(attr =>
             attr.title?.toLowerCase().includes('fabric')
         );
         const labels = fabricAttrs?.[0]?.labels || [];
