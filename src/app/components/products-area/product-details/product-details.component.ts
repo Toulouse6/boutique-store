@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ProductsService } from '../../../services/products.service';
 import ProductModel from '../../../models/product.model';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CartService } from '../../../services/cart.service';
@@ -36,6 +36,7 @@ export class ProductDetailsComponent implements OnInit {
         private title: Title,
         private productService: ProductsService,
         private activatedRoute: ActivatedRoute,
+        private router: Router,
         private cartService: CartService
     ) { }
 
@@ -146,8 +147,8 @@ export class ProductDetailsComponent implements OnInit {
         this.cartService.addToCart(this.product, this.quantity, color, size, fabric);
 
         alert("Added to cart!");
+        this.router.navigate(['/catalog']);
     }
-
 
 
 }
