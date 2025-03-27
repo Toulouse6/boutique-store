@@ -39,7 +39,9 @@ h1 {
     bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
-    background-color: transparent;}
+    background-color: transparent;
+    overflow: hidden;
+}
 
 .pagination button {
     border: none;
@@ -116,7 +118,7 @@ h1 {
         }
 
         .catalogWrapper {
-           padding-bottom: 3rem;
+            padding-bottom: 3rem;
         }
 
     }
