@@ -31,18 +31,17 @@ h1 {
 
 /* Pagination */
 .pagination {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: transparent;
-    overflow: hidden;
+    background-color: white;
+    z-index: 999;
 }
-
 
 .pagination button {
     border: none;
