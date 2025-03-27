@@ -159,22 +159,10 @@ div {
     cursor: pointer;
 }
 
-/* 
-.addToCart {
-    width: 180px;
-    background-color: #0e1923;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-}
-
 .addToCart:hover {
-    background-color: #c9d1da;
-}
- */
+    background-color: #0e192310; 
+    border-color: #0e1923;
+  }
 
 /* Responsive */
 

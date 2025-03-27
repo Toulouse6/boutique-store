@@ -57,27 +57,15 @@
     margin-top: 2rem;
 }
 
-/*
-.clear-cart-button {
-    width: 150px;
-    background-color: #0e1923;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 15px;
-    border: none;
-    cursor: pointer;
-}
-
-.clear-cart-button:hover {
-    background-color: #c9d1da;
-}
-*/
-
 .cartActions {
     display: flex;
     justify-content: flex-end;
     margin-top: 1rem;
+}
+
+.clear-cart-button:hover {
+    background-color: #0e192310;
+    border-color: #0e1923;
 }
 
 .emptyCart {
