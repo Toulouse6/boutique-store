@@ -134,20 +134,20 @@ div {
 }
 
 .quantityContainer {
-    padding: 5px 10px;
+    padding: 5px 30px;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     border-radius: 6px;
     border: 1px solid #ddd;
     font-size: 14px;
     margin-bottom: 0.5rem;
     background: white;
     width: fit-content;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 
-/* Buttons
+/* Buttons */
 .quantityContainer button {
     text-align: center;
     justify-content: center;
@@ -159,6 +159,7 @@ div {
     cursor: pointer;
 }
 
+/* 
 .addToCart {
     width: 180px;
     background-color: #0e1923;
