@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CartService, CartItem } from '../../services/cart.service';
 import { CommonModule } from '@angular/common';
 import { ProductsService } from '../../services/products.service';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'app-cart-page',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, MatButtonModule],
     templateUrl: './cart-page.component.html',
     styleUrl: './cart-page.component.css'
 })
