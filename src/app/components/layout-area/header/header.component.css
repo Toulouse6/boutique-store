@@ -2,7 +2,7 @@
     width: 100%;
     height: 20vh;
     background-image: url('../../../../assets/images/header-banner.png');
-    background-size: 90%; 
+    background-size: 90%;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -12,19 +12,28 @@
 }
 
 #headerImage {
-    width: 100%;  
-    height: 100%; 
-    object-fit: contain; 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     display: block;
 }
 
 /* Responsive */
 
 @media (max-width: 780px) {
-    
+
     .headerBanner {
         width: 100%;
         height: 15vh;
-        background-size: 95%;     
+        background-size: 95%;
     }
+}
+
+
+@media (max-width: 580px) {
+
+    .headerBanner {
+        margin-top: -1rem;
+    }
+
 }

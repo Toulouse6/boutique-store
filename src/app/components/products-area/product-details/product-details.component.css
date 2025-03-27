@@ -107,6 +107,7 @@ div {
     font-weight: 400;
     font-size: 14px;
     min-height: 50px;
+    line-height: 1.6;
 }
 
 /* Dropdowns */
@@ -275,10 +276,6 @@ div {
 
     .imageContainer img {
         height: 30vh;
-    }
-
-    .productInfo {
-        padding: 4rem 1.5rem 10rem;
     }
 
     .dropdownContainer select {
