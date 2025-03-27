@@ -1,18 +1,25 @@
 @use '@angular/material' as mat;
 
-// Custom primary color:
-$my-primary: mat.define-palette((500: #0e1923,
-            contrast: (500: #ffffff)));
+// Step 1: Define your full custom palette
+$my-primary: mat.define-palette((
+  100: #1a232d,
+  500: #0e1923,
+  700: #080f15,
+  contrast: (
+    100: #ffffff,
+    500: #ffffff,
+    700: #ffffff
+  )
+));
 
-// Accent color:
 $my-accent: mat.define-palette(mat.$gray-palette, 600);
 
-// Create theme:
-$my-theme: mat.define-light-theme((color: (primary: $my-primary,
-                accent: $my-accent,
-            ),
-            typography: mat.define-typography-config(),
-        ));
+// Step 2: Create and apply the theme
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+  )
+));
 
-// Apply theme to all Material components:
 @include mat.all-component-themes($my-theme);
