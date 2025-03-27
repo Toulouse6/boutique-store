@@ -64,12 +64,14 @@
 }
 
 .clear-cart-button {
-    background-color: #3856723b; 
+    background-color: #3856723b;
+    font-weight: 500;
 }
 
 .clear-cart-button:hover {
-    background-color: #3856727a; 
-    font-weight: 500;
+    background-color: #3856727a;
+    color: white;
+
 }
 
 .emptyCart {
