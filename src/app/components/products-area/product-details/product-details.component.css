@@ -21,7 +21,7 @@ div {
     gap: 5%;
     padding: 2rem 0 0;
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     overflow-y: auto;
 }
 
@@ -215,7 +215,6 @@ div {
 
     .productPage {
         width: 100%;
-        height: fit-content;
         display: block;
         position: relative;
         overflow-y: auto !important
