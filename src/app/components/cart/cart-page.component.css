@@ -63,9 +63,12 @@
     margin-top: 1rem;
 }
 
+.clear-cart-button {
+    background-color: #3856723b; 
+}
+
 .clear-cart-button:hover {
     background-color: #3856727a; 
-    color: white;
     font-weight: 500;
 }
 

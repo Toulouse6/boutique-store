@@ -76,7 +76,7 @@ div {
 }
 
 .badge {
-    background-color: #3856727a; 
+    background-color: #3856727a;
     color: white;
     padding: 5px 15px;
     font-size: 18px;
@@ -159,11 +159,15 @@ div {
     cursor: pointer;
 }
 
-.addToCart:hover {
-    background-color: #3856727a; 
-    color: white;
+.addToCart {
+    background-color: #3856723b;
     font-weight: 500;
-  }
+}
+
+.addToCart:hover {
+    background-color: #3856727a;
+    color: white;
+}
 
 /* Responsive */
 
