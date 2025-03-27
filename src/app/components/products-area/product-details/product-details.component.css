@@ -161,7 +161,8 @@ div {
 
 .addToCart:hover {
     background-color: #3856727a; 
-    border-color: #385672;
+    color: white;
+    font-weight: 600;
   }
 
 /* Responsive */
