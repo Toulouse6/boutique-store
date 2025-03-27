@@ -64,8 +64,8 @@
 }
 
 .clear-cart-button:hover {
-    background-color: #0e192310;
-    border-color: #0e1923;
+    background-color: #d00000; 
+    border-color: #aa0000;
 }
 
 .emptyCart {
