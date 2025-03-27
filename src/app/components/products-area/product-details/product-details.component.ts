@@ -6,11 +6,12 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CartService } from '../../../services/cart.service';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'app-product-details',
     standalone: true,
-    imports: [RouterLink, CommonModule, NgIf, FormsModule],
+    imports: [RouterLink, CommonModule, NgIf, FormsModule, MatButtonModule],
     templateUrl: './product-details.component.html',
     styleUrl: './product-details.component.css'
 })
