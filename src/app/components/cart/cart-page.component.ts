@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { CartService, CartItem } from '../../services/cart.service';
 import { CommonModule } from '@angular/common';
 import { ProductsService } from '../../services/products.service';
-import ProductModel from '../../models/product.model';
 
 @Component({
     selector: 'app-cart-page',
