@@ -1,0 +1,59 @@
+<div class="productWraper">
+    <div class="productPage" *ngIf="product; else notFound">
+
+        <!-- Image Container -->
+        <div class="imageContainer">
+            <img [src]="getProductImage()" alt="{{ product.title }}" class="product-image" />
+        </div>
+
+        <!-- Info Container -->
+        <div class="productInfo">
+            <span class="badge">NEW</span>
+
+            <h2 class="title">{{ product.title }}</h2>
+            <h3 class="price">${{ product.min_price | number: '1.0-0' }}</h3>
+            <p class="description">{{ product.description }}</p>
+
+            <!-- Color -->
+            <div class="dropdownContainer" *ngIf="colorOptions.length > 0">
+                <select [(ngModel)]="selectedColor">
+                    <option value="">Choose color</option>
+                    <option *ngFor="let c of colorOptions" [value]="c.label_id">{{ c.title }}</option>
+                </select>
+            </div>
+
+            <!-- Size -->
+            <div class="dropdownContainer" *ngIf="sizeOptions.length > 0">
+                <select [(ngModel)]="selectedSize">
+                    <option value="">Choose size</option>
+                    <option *ngFor="let s of sizeOptions" [value]="s.label_id">{{ s.title }}</option>
+                </select>
+            </div>
+
+            <!-- Fabric -->
+            <div class="dropdownContainer" *ngIf="fabricOptions.length > 0">
+                <select [(ngModel)]="selectedFabric">
+                    <option value="">Choose fabric</option>
+                    <option *ngFor="let f of fabricOptions" [value]="f.label_id">{{ f.title }}</option>
+                </select>
+            </div>
+
+            <!-- Quantity -->
+            <div class="quantityContainer">
+                <button (click)="decreaseQuantity()">-</button>
+                <span>{{ quantity }}</span>
+                <button (click)="increaseQuantity()">+</button>
+            </div>
+
+            <!-- Add to cart -->
+            <button mat-stroked-button color="primary" class="addToCart" (click)="addToCart()">Add to Cart</button>
+            <br><a class="goBack" routerLink="/catalog">&#x2190; Go back</a>
+        </div>
+    </div>
+
+    <!-- Not found -->
+    <ng-template #notFound>
+        <p>Product not found.</p>
+        <a class="goBack" routerLink="/catalog">&#x2190; Go back</a>
+    </ng-template>
+</div>

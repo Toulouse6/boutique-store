@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+
+// Primary color based on #385672
+$my-primary: mat.define-palette((
+  100: #6e8291,
+  500: #385672,
+  700: #223547,
+  contrast: (
+    100: #ffffff,
+    500: #ffffff,
+    700: #ffffff
+  )
+));
+
+$my-accent: mat.define-palette(mat.$gray-palette, 600);
+
+// Define the theme
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+  )
+));
+
+// Apply theme to all Material components
+@include mat.all-component-themes($my-theme);

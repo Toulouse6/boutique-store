@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<div class="cartPage">
+
+    <!-- Show cart / show empty cart -->
+    <ng-container *ngIf="cartItems.length > 0; else emptyCart">
+        <div class="tableWrapper">
+            <table class="cartTable">
+                <thead>
+                    <tr>
+                        <th>Preview</th>
+                        <th>Item</th>
+                        <th>Qt.</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Render each item -->
+                    <tr *ngFor="let item of cartItems">
+                        <td>
+                            <!-- Load product image -->
+                            <img [src]="productService.getImageUrl(item.product.images[0]?.url)" alt="product image" />
+                        </td>
+                        <td>{{ item.product.title }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>${{ item.product.min_price }}</td>
+                        <td>${{ item.product.min_price * item.quantity }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Cart total -->
+        <div class="cartTotal">
+            <strong>${{ getTotal() }}</strong>
+        </div>
+
+        <!-- Clear Cart -->
+        <div class="cartActions">
+            <button mat-stroked-button color="primary" (click)="clearCart()" class="clear-cart-button">
+                Clear Cart
+            </button>
+        </div>
+    </ng-container>
+    <!-- Empty -->
+    <ng-template #emptyCart>
+        <p class="emptyCart">Your cart is empty...</p>
+        <img src="./assets/images/cart.png" alt="Cart" class="cart-icon" />
+    </ng-template>
+
+</div>

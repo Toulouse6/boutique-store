@@ -1,0 +1,131 @@
+/* Product cards */
+.card {
+    padding: 15px;
+    width: 220px;
+    max-height: 347px;
+    min-height: 347px;
+    display: inline-block;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: space-between;
+    text-align: top;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Sale */
+.saleContainer {
+    position: absolute;
+    width: fit-content;
+    align-items: center;
+    height: 32px;
+    margin: 10px;
+    border-radius: 6px;
+    background-color: #3856727a; 
+    border-radius: 6px;
+    text-align: center;
+}
+
+.saleContainer>p {
+    margin: 0;
+    letter-spacing: 3px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+/* Product image */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* Texts */
+.card p,
+.card h4,
+.card h5 {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0e1923;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 3.5rem;
+    text-align: left;
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 500;
+    color: #242424;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 3.5rem;
+    text-align: left;
+}
+
+/* Prices */
+.priceWraper {
+    display: flex;
+    gap: 1rem;
+    font-size: 16px;
+    line-height: 2;
+    font-weight: 700;
+}
+
+.min {
+    color: #242424;
+}
+
+.max {
+    color: #888888;
+    text-decoration: line-through;
+}
+
+
+/* Responsive */
+
+@media (max-width: 780px) {
+
+    .card {
+        width: 148px;
+        max-height: 267px;
+        min-height: 267px;
+    }
+
+    .card img {
+        width: 100%;
+        height: 148px;
+    }
+
+    .title {
+        font-size: 15px;
+        min-height: 3rem;
+    }
+
+    .description {
+        font-size: 12px;
+        min-height: 4rem;
+    }
+
+}

@@ -1,0 +1,267 @@
+div {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.productWraper {
+    display: inline-block;
+    justify-content: center;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+}
+
+.productPage {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: start;
+    margin: 0;
+    gap: 5%;
+    padding: 2rem 0 0;
+    width: 100%;
+    height: fit-content;
+    overflow-y: auto;
+}
+
+/* Image container */
+.imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    height: 100%;
+}
+
+/* Product image */
+.imageContainer img {
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
+}
+
+/* Product Info */
+.productInfo {
+    flex: 1;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+/* 'New' bedge */
+.badge {
+    background-color: #3856727a;
+    color: white;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+
+/* Title */
+.title {
+    margin: 1rem 0 0 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* Price */
+.productPage .price {
+    margin: 1rem 0;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 600;
+    color: black;
+}
+
+/* Description */
+.description {
+    margin: 1rem 0 2rem;
+    color: #242424;
+    font-weight: 400;
+    font-size: 1rem;
+    min-height: 50px;
+    line-height: 1.6;
+}
+
+/* Dropdowns */
+.dropdownContainer select {
+    width: 80%;
+    display: block;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: white;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.color-preview {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+.quantityContainer {
+    padding: 5px 30px;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    background: white;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+
+/* Buttons */
+
+/* Quantity btn */
+.quantityContainer button {
+    text-align: center;
+    justify-content: center;
+    background: white;
+    border: none;
+    width: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add to cart btn */
+.addToCart {
+    background-color: #3856727a;
+    font-weight: 400;
+    color: #edfbfe !important;
+    border: none;
+}
+
+.addToCart:hover {
+    background-color: #3856723b;
+    color: white !important;
+}
+
+/* Go back */
+.goBack {
+    font-size: 1rem;
+    line-height: 3;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1400px) {
+
+    .productWraper {
+        display: inline-block;
+        justify-content: center;
+        width: 80%;
+        padding: 2rem 0;
+    }
+
+    .imageContainer img {
+        height: 70vh;
+    }
+
+    .title {
+        margin: 1rem 0 0 0;
+        font-size: 32px;
+    }
+
+    .productPage .price {
+        font-size: 25px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .productWraper {
+        width: 100%;
+        padding: 0;
+    }
+
+    .productPage {
+        width: 100%;
+        display: block;
+        position: relative;
+        overflow-y: auto !important
+    }
+
+    .imageContainer {
+        display: block;
+        justify-content: center;
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        z-index: 2;
+    }
+
+    .imageContainer img {
+        height: 40vh;
+        margin-bottom: -2rem;
+        z-index: 1;
+    }
+
+    .productInfo {
+        width: auto;
+        height: 100%;
+        margin: -2rem 0 0 0;
+        border-radius: 40px 40px 0 0;
+        padding: 4rem 1.5rem 5rem;
+        box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        background-color: white;
+        position: relative;
+        z-index: 3;
+    }
+
+    .dropdownContainer select {
+        width: 100%;
+    }
+
+    .addToCart {
+        width: 100%;
+    }
+
+    .dropdownContainer {
+        background-color: white;
+    }
+
+
+}
+
+
+@media (max-width: 600px) {
+
+    .productWraper {
+        padding: 0;
+        width: 100%;
+    }
+
+    .productPage {
+        padding: 0;
+    }
+
+    .imageContainer img {
+        height: 30vh;
+    }
+
+    .dropdownContainer select {
+        width: 95%;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+
+}

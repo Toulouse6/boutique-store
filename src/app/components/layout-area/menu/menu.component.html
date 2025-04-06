@@ -1,0 +1,16 @@
+<div class="menuDiv">
+    <!-- Logo -->
+    <a routerLink="/catalog" class="logo-link">
+        <img id="logo" src="./assets/images/boutique-logo.png" alt="Logo" />
+    </a>
+
+    <!-- Links -->
+    <div class="homeLinks">
+        <!-- Catalog -->
+        <a routerLink="/catalog" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <!-- Cart -->
+        <a routerLink="/cart" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <img src="./assets/images/cart.png" alt="Cart" class="cart-icon" />
+        </a>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div>
+    <app-header></app-header>
+
+    <div class="titleBox">
+        <h1>Our Catalog</h1>
+    </div>
+
+    <!-- Catalog wrapper -->
+    <div class="catalogWrapper">
+        <div *ngIf="displayedProducts?.length > 0; else noProducts">
+            <app-product-card *ngFor="let p of displayedProducts" [product]="p"></app-product-card>
+        </div>
+        <!-- No products -->
+        <ng-template #noProducts>
+            <p>
+                Please request
+                <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" rel="noopener noreferrer">demo
+                    server access</a>.
+            </p>
+        </ng-template>
+    </div>
+    <!-- Pagination -->
+    <div class="pagination">
+        <!-- Previous -->
+        <button (click)="goToPreviousPage()" [disabled]="currentPage === 1">
+            &#x2190;
+        </button>
+
+        <div class="pagination-numbers">
+            <span *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)"
+                [class.active]="currentPage === i + 1">
+                {{ i + 1 }}
+            </span>
+        </div>
+        <!-- Next-->
+        <button (click)="goToNextPage()" [disabled]="currentPage === totalPages">
+            &#x2192;
+        </button>
+    </div>
+</div>

@@ -1,0 +1,170 @@
+/* Page layout */
+.cartPage {
+    width: 100%;
+    max-height: 100dvh;
+    /*DVH for Mobile height*/
+    margin-top: 2rem;
+    padding: 0 6rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    ;
+}
+
+/* Tabel Wrapper */
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Tabel */
+.cartTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Even rows */
+.cartTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* th & td */
+.cartTable th,
+.cartTable td {
+    padding: 1rem;
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.cartTable th {
+    background-color: #f7f7f7;
+}
+
+/* Tabel image */
+.cartTable img {
+    border-radius: 4px;
+    width: 50px;
+    height: auto;
+}
+
+/* Total */
+.cartTotal {
+    width: 98%;
+    text-align: center;
+    justify-content: flex-end;
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+.cartActions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+/* Button */
+.clear-cart-button {
+    background-color: #3856727a;
+    font-weight: 400;
+    color: #edfbfe !important;
+    border: none;
+}
+
+.clear-cart-button:hover {
+    background-color: #3856723b;
+    color: white !important;
+}
+
+.emptyCart {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+}
+
+
+/* Icon */
+.cart-icon {
+    margin-top: 1rem;
+    width: 70px;
+    height: 70px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1400px) {
+
+    .cartPage {
+        padding: 0 4rem;
+        margin-top: 1.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .cartPage {
+        margin-top: 1.2rem;
+        padding: 0 3rem;
+    }
+}
+
+
+@media (max-width: 780px) {
+
+    .cartPage {
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+
+    .cartTable th,
+    .cartTable td {
+        padding: 0.4rem;
+        font-size: 0.75rem;
+    }
+
+    .cartTable img {
+        width: 36px;
+    }
+
+    .cartTotal {
+        font-size: 1.2rem;
+    }
+
+    .emptyCart {
+        margin-top: 5rem;
+        font-size: 1.2rem;
+    }
+
+    .cart-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 430px) {
+    .cartPage {
+        margin-top: 0;
+        padding: 0 0.5rem;
+    }
+
+    .cartTable th,
+    .cartTable td {
+        padding: 0.3rem;
+        font-size: 0.7rem;
+    }
+
+    .cartTable img {
+        width: 30px;
+    }
+
+}

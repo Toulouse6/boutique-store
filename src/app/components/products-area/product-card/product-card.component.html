@@ -1,0 +1,22 @@
+<div class="card">
+    <!-- Sale container-->
+    <div class="saleContainer" *ngIf="getSale() !== null">
+        <p>%{{ getSale() | number: '1.0-0' }} OFF</p>
+    </div>
+    <!-- Single product link-->
+    <a [routerLink]="'/catalog/product/' + product.id">
+        <img [src]="getProductImage()" alt="{{ product.title }}" />
+    </a>
+
+    <div class="productData">
+        <!-- Prodcut data -->
+        <h4 class="title">{{ product.title }}</h4>
+        <!-- Price -->
+        <div class="priceWraper">
+            <h5 class="min">${{ product.min_price | number: '1.0-0' }}</h5>
+            <h5 class="max" *ngIf="product.max_price > product.min_price">${{ product.max_price | number: '1.0-0' }}
+            </h5>
+        </div>
+        <p class="description">{{ product.description | slice:0:35 }}...</p>
+    </div>
+</div>
