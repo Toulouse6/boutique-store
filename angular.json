@@ -15,7 +15,6 @@
                         "outputPath": "dist/boutique-store",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
-                        "inlineFonts": false,
                         "polyfills": [
                             "zone.js"
                         ],
